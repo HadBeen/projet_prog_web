@@ -2,96 +2,162 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- stylesheet fait pour structure le desgine des doc html  -->
+    <link rel="stylesheet" href=".css/styles.css" />
+
+    <!-- un stylesheet exterieur (sur web)pour importer les icones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <style>
+      div,
+      span {
+        border: 2px solid black;
+      }
+    </style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portail SCIENCES DE L'UNIVERS</title>
   </head>
   <body>
-    <header>
-      <h1>SCIENCES DE L'UNIVERS</h1>
-      <p>
-        Bien qu'en principe l'Univers regroupe tout ce qui existe, les sciences
-        de l'Univers désignent en pratique les disciplines scientifiques qui
-        étudient ce qui est extérieur à la Terrea.
-      </p>
-    </header>
-    <nav>
-      <h2>Sommaire</h2>
-      <a href="#">Les différentes branches</a>
-      <a href="#">La vie dans l'Univers</a>
-      <a href="#">La forme et l'évolution de l'Univers</a>
-      <a href="#">Les objets de l'Univers</a>
-      <a href="#">Galaxies</a>
-      <a href="#">Étoiles et nébuleuses</a>
-    </nav>
-    <main>
-      <section>
-        <h3>Les différentes branches</h3>
+    <div>
+      <!-- debut nav : utilise pour explorer les diffrent partie du page actuelle  -->
+      <nav>
+        <h2>LOGO</h2>
+        <a href="index.html">Accueil</a>
+        <a href="#content">Contenu </a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <!-- fin nav  -->
+    </div>
+    <div>
+      <!-- debut du header  -->
+      <header>
+        <h1>SCIENCES DE L'UNIVERS</h1>
+        <br />
+        <h5>bienvenue dans le site documentaire sience de l'univers</h5>
+        <p>
+          Bien qu'en principe l'Univers regroupe tout ce qui existe, les
+          sciences de l'Univers désignent en pratique les disciplines
+          scientifiques qui étudient ce qui est extérieur à la Terrea.
+        </p>
+        <a href="#">decouvrir plus</a>
+        <!-- decouvrir plus "défile jusqu'à la page suivante pour explorer le contenu du site" -->
+      </header>
+      <!-- debut du header  -->
+    </div>
+    <div>
+      <!-- debut de aside , ici le 'aside' est utilise pour lister le contenu de la page index.html
+      chaque item de la liste contient un lien qui permet de scroller vers le titre cible-->
+      <aside id="content">
+        <h3>Sommaire</h3>
         <ul>
-          <li>Astronomie</li>
-          <li>Astrophysique</li>
-          <li>Cosmologie</li>
+          <li><a href="#branche">Les différentes branches</a></li>
+          <li><a href="#evolution">La forme et l'évolution de l'Univers</a></li>
+          <li><a href="#objet">Les objets de l'Univers</a></li>
+          <li><a href="#galaxie">Galaxies</a></li>
+          <li><a href="#etoile">Étoiles et nébuleuses</a></li>
         </ul>
-      </section>
-      <section>
-        <h3>La vie dans l'Univers</h3>
-        <ul>
-          <li>Exobiologie</li>
-          <li>Système planétaire</li>
-        </ul>
-      </section>
-      <section>
-        <h3>La forme et l'évolution de l'Univers</h3>
-        <ul>
-          <li>Big Bang</li>
-          <li>Big Crunch</li>
-          <li>Évolution et Conscience</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Les objets de l'Univers</h3>
-        <ul>
-          <li>Comète</li>
-          <li>Galaxie d'Andromède</li>
-          <li>Petit Nuage de Magellan</li>
-          <li>Grand Nuage de Magellan</li>
-          <li>Système solaire</li>
-          <li>Voie lactée</li>
-          <li>Exoplanètes</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Galaxies</h3>
-        <ul>
-          <li>Galaxie</li>
+      </aside>
+      <!-- fin aside  -->
+    </div>
+    <div>
+      <!-- debut main : le contenu de la page index.html -->
+      <main>
+        <!-- debut d'un section  -->
+        <section id="branche">
+          <h3>Les différentes branches</h3>
+          <p>Les différentes branches des sciences de l'Univers sont:</p>
           <ul>
-            <li>Galaxie spirale</li>
-            <li>Galaxie elliptique</li>
-            <li>Galaxie irrégulière</li>
-            <li>Radiogalaxie</li>
-            <li>Quasar</li>
+            <li>Astronomie</li>
+            <li>Astrophysique</li>
+            <li>Cosmologie</li>
           </ul>
-          <li>Amas de galaxies</li>
-          <li>Superamas de galaxies</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Étoiles et nébuleuses</h3>
-        <ul>
-          <li>Constellation</li>
-          <li>Étoile</li>
-          <li>Naine blanche</li>
-          <li>Nébuleuse</li>
-          <li>Pulsar</li>
-          <li>Supernova</li>
-          <li>Étoile à neutrons</li>
-          <li>Trou noir</li>
-          <li>Soleil</li>
-        </ul>
-      </section>
-    </main>
-    <aside></aside>
+          <!-- a est utilise pour naviguer vers les autre page,
+chaque section du main de la page d'acceuille a une page.html qui contient plus de detail 
+,cette page est acceder par le lien "decouvir plus" -->
+
+          <a href="branche.html">decouvrir plus</a>
+        </section>
+        <!-- fin de section  -->
+        <section id="evolution">
+          <h3>La forme et l'évolution de l'Univers</h3>
+          <p>
+            L'histoire de l'Univers décrit l'évolution de l’Univers en
+            s’appuyant sur la théorie scientifique du Big Bang et les recherches
+            en cosmologie et astronomie.
+          </p>
+          <a href="evolution.html">decouvrir plus</a>
+        </section>
+
+        <section id="objet">
+          <h3>Les objets de l'Univers</h3>
+          <p>
+            L'univers est composé de milliards d'étoiles et d'autres objets
+            célestes tels les planètes, les comètes, les astéroïdes, etc. Tous
+            ces corps se structurent en galaxies, amas et superamas.
+          </p>
+
+          <a href="objet.html">decouvrir plus</a>
+        </section>
+        <section id="galaxie">
+          <h3>Galaxies</h3>
+          <p>
+            Une galaxie est un assemblage d'étoiles, de gaz, de poussières, de
+            vide et peut-être essentiellement de matière noire, contenant
+            parfois un trou noir supermassif en son centre...
+          </p>
+          <a href="galaxies.html">decouvrir plus</a>
+        </section>
+
+        <section id="etoile">
+          <h3>Étoiles et nébuleuses</h3>
+          <p>Plusieur theme seront representée:</p>
+          <ul>
+            <li>Constellation</li>
+            <li>Étoile</li>
+            <li>Naine blanche</li>
+            <li>Nébuleuse</li>
+            <li>Pulsar</li>
+            <li>Supernova</li>
+            <li>Étoile à neutrons</li>
+            <li>Trou noir</li>
+            <li>Soleil</li>
+          </ul>
+          <a href="etoile.html">decouvrir plus</a>
+        </section>
+      </main>
+      <!-- fin de main -->
+    </div>
+
     <footer>
-      <p>ref=wiki contact:hadjerbenali0@gmail.com year and the c thing</p>
+      <h3>References</h3>
+      <ul>
+        <li>Wikipedia</li>
+        <li>LaScience.be</li>
+        <li>fun.mooc</li>
+      </ul>
+      <h3>Liens externes</h3>
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://fr.wikipedia.org/wiki/Sciences_de_l%27Univers"
+            >Science de l'univers</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://www.youtube.com/watch?v=oWbEPBCwriM"
+            >[Daniel Kunth] De la vie dans l’Univers</a
+          >
+        </li>
+      </ul>
+      <strong id="contact"> FOLLOW US! </strong> <br />
+      <a href="#"><i class="icon ion-social-facebook"></i></a>
+      <a href="#"><i class="icon ion-social-linkedin"></i></a>
+
+      <p>&copy Copyright 2020 ScienceUnivers - Tous droits réservés.</p>
     </footer>
   </body>
 </html>

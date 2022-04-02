@@ -3,7 +3,7 @@ body {
 }
 
 :root {
-  /* les couleurs utilise dans le desgin */
+  /* les couleurs primaire utilise dans le desgin */
   --primary-90: #535f97;
   --primary-100: #2c4078;
   --primary-200: #514577;
@@ -15,24 +15,28 @@ body {
   --primary-800: #09051a;
   --primary-900: #13091e;
 
-  /* les nuances de grey pour */
-  --grey-50: #f8fafc;
-  --grey-100: #f1f5f9;
-  --grey-200: #e2e8f0;
-  --grey-300: #cbd5e1;
-  --grey-400: #94a3b8;
-  --grey-500: #64748b;
-  --grey-600: #475569;
-  --grey-700: #334155;
-  --grey-800: #1e293b;
-  --grey-900: #0f172a;
   /* autres couleur*/
-  --black: #222;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
   --white: #fff;
-  --red-light: #f8d7da;
-  --red-dark: #842029;
-  --green-light: #d1e7dd;
-  --green-dark: #0f5132;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
 
   /* les fonts adapte dans toute la documentation  */
   --headingFont: "Roboto", sans-serif;
