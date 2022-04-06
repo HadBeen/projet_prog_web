@@ -3,42 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <!-- stylesheet fait pour structure le desgine des doc html  -->
-    <link rel="stylesheet" href=".css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 
     <!-- un stylesheet exterieur (sur web)pour importer les icones -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
-    <style>
-      div,
-      span {
-        border: 2px solid black;
-      }
-    </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SCIENCES DE L'UNIVERS</title>
   </head>
   <body>
-    <div>
-      <!-- debut nav : utilise pour explorer les diffrent partie du page actuelle  -->
-      <nav>
-        <h2>LOGO</h2>
-        <a href="index.html">Accueil</a>
-        <a href="#content">Contenu </a>
-        <a href="#contact">Contact</a>
-        <!-- les metter dans un container pour les reduire et ne pas surcharger navbar -->
-        <a href="branche.html">Différentes branches</a>
-        <a href="evolution.html">Evolution</a>
-        <a href="objet.html">Objets</a>
-        <a href="galaxies.html">Galaxies</a>
-        <a href="etoile.html">Étoiles et nébuleuses</a>
-        <!-- fin container -->
-      </nav>
-      <!-- fin nav  -->
-    </div>
-    <div>
+    <div class="st_page">
+      <!-- nav  -->
+      <div id="nabvar">
+        <nav class="navbar">
+          <div class="nav-center">
+            <div class="nav-header">
+              <a href="index.html" class="nav-logo">
+                <img src="Assets/logo.svg" alt="LOGO" class="nav-logo" />
+              </a>
+              <button class="nav-btn btn">
+                <i class="fas fa-align-justify"></i>
+              </button>
+            </div>
+            <div class="nav-links">
+              <a href="index.html" class="nav-link">Accueil</a>
+              <a href="#content " class="nav-link">Contenu </a>
+              <a href="branche.html" class="nav-link">Différentes branches</a>
+              <a href="evolution.html" class="nav-link">Evolution</a>
+              <a href="objet.html" class="nav-link">Objets</a>
+
+              <div class="nav-link contact-link">
+                <a href="#contact" class="btn">Contact</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- fin navbar -->
+      <div class="page">
       <!-- debut du header  -->
       <header>
         <h1>SCIENCES DE L'UNIVERS</h1>
@@ -47,15 +53,18 @@
         <p>
           Bien qu'en principe l'Univers regroupe tout ce qui existe, les
           sciences de l'Univers désignent en pratique les disciplines
-          scientifiques qui étudient ce qui est extérieur à la Terrea.
+          scientifiques qui étudient ce qui est extérieur à la Terre.
         </p>
+
         <a href="#">decouvrir plus</a>
         <!-- decouvrir plus "défile jusqu'à la page suivante pour explorer le contenu du site" -->
       </header>
       <!-- fin du header  -->
+    
+
+
     </div>
-    <div>
-      <!-- debut de aside , ici le 'aside' est utilise pour lister le contenu de la page index.html
+          <!-- debut de aside , ici le 'aside' est utilise pour lister le contenu de la page index.html
       chaque item de la liste contient un lien qui permet de scroller vers le titre cible-->
       <aside id="content">
         <h3>Sommaire</h3>
@@ -66,10 +75,9 @@
         </ul>
       </aside>
       <!-- fin aside  -->
-    </div>
     <div>
       <!-- debut main : le contenu de la page index.html -->
-      <main>
+      <main >
         <!-- debut d'un section  -->
         <section id="branche">
           <h3>Les différentes branches</h3>
