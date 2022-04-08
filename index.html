@@ -15,7 +15,7 @@
     <title>SCIENCES DE L'UNIVERS</title>
   </head>
   <body>
-    <div class="st_page">
+    <div class="nav-container .scrolled">
       <!-- nav  -->
       <div id="nabvar">
         <nav class="navbar">
@@ -28,80 +28,106 @@
                 <i class="fas fa-align-justify"></i>
               </button>
             </div>
-            <div class="nav-links">
-              <a href="index.html" class="nav-link">Accueil</a>
-              <a href="#content " class="nav-link">Contenu </a>
-              <a href="branche.html" class="nav-link">Différentes branches</a>
-              <a href="evolution.html" class="nav-link">Evolution</a>
-              <a href="objet.html" class="nav-link">Objets</a>
-
-              <div class="nav-link contact-link">
-                <a href="#contact" class="btn">Contact</a>
-              </div>
-            </div>
           </div>
-        </nav>
-      </div>
+          <div class="nav-links">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="#content " class="nav-link">Contenu </a>
+            <a href="branche.html" class="nav-link">Différentes branches</a>
+            <a href="evolution.html" class="nav-link">Evolution</a>
+            <a href="objet.html" class="nav-link">Objets</a>
+            <a href="#contact" class=" btn">Contact</a>
+            <script>
+const getElement = (selector) => {
+  const element = document.querySelector(selector)
 
-      <!-- fin navbar -->
-      <div class="page">
+  if (element) return element
+  throw Error(
+    `Please double check your class names, there is no ${selector} class`
+  )
+}
+
+const links = getElement('.nav-links')
+const navBtnDOM = getElement('.nav-btn')
+
+navBtnDOM.addEventListener('click', () => {
+  links.classList.toggle('show-links')
+})
+            </script>
+          </div>
+          
+        </nav>
+        
+
+      </div>
+   
+    <!-- fin navbar -->
+    <div class="page">
       <!-- debut du header  -->
       <header>
-        <h1>SCIENCES DE L'UNIVERS</h1>
-        <br />
-        <h5>bienvenue dans le site documentaire sience de l'univers</h5>
-        <p>
-          Bien qu'en principe l'Univers regroupe tout ce qui existe, les
-          sciences de l'Univers désignent en pratique les disciplines
-          scientifiques qui étudient ce qui est extérieur à la Terre.
-        </p>
 
-        <a href="#">decouvrir plus</a>
+        <div class="center_1st_page">
+          <h1>SCIENCES DE L'UNIVERS</h1>
+          <br />
+          <h3>Bienvenue au site documentaire</h3>
+
+          <a href="#smooth" class="btn">Decouvrir plus</a>
+
+        </div>
+
+
         <!-- decouvrir plus "défile jusqu'à la page suivante pour explorer le contenu du site" -->
       </header>
       <!-- fin du header  -->
-    
-
-
     </div>
-          <!-- debut de aside , ici le 'aside' est utilise pour lister le contenu de la page index.html
-      chaque item de la liste contient un lien qui permet de scroller vers le titre cible-->
-      <aside id="content">
-        <h3>Sommaire</h3>
-        <ul>
-          <li><a href="#branche">Les différentes branches</a></li>
-          <li><a href="#evolution">La forme et l'évolution de l'Univers</a></li>
-          <li><a href="#objet">Les objets de l'Univers</a></li>
-        </ul>
-      </aside>
-      <!-- fin aside  -->
-    <div>
+    <div id="smooth">
+      <h1>Discover</h1>
+    </div>
+
+ 
+      <div class="aside_container">
+        <aside >
+          <p>
+            Bien qu'en principe <strong>l'Univers </strong> regroupe tout ce qui existe, les
+            sciences de l'Univers désignent en pratique les disciplines
+            scientifiques qui étudient ce qui est extérieur à la Terre.
+          </p>
+          </aside >
+     </div>
+
+
+        </aside>
+        <!-- fin aside  -->
+      </div>
+
+    <div id="content">
       <!-- debut main : le contenu de la page index.html -->
-      <main >
+      <main>
         <!-- debut d'un section  -->
         <section id="branche">
           <h3>Les différentes branches</h3>
           <p>Les différentes branches des sciences de l'Univers sont:</p>
           <ul>
-            <li>Astronomie</li>
-            <li>Astrophysique</li>
-            <li>Cosmologie</li>
+            <li>-Astronomie</li>
+            <li>-Astrophysique</li>
+            <li>-Cosmologie</li>
           </ul>
+
           <!-- a est utilise pour naviguer vers les autre page,
 chaque section du main de la page d'acceuille a une page.html qui contient plus de detail 
 ,cette page est acceder par le lien "decouvir plus" -->
 
-          <a href="branche.html">decouvrir plus</a>
+          <a class="btn" href="branche.html">decouvrir plus</a>
         </section>
         <!-- fin de section  -->
         <section id="evolution">
           <h3>La forme et l'évolution de l'Univers</h3>
+
           <p>
             L'histoire de l'Univers décrit l'évolution de l’Univers en
             s’appuyant sur la théorie scientifique du Big Bang et les recherches
             en cosmologie et astronomie.
           </p>
-          <a href="evolution.html">decouvrir plus</a>
+          <a class="btn" href="evolution.html">decouvrir plus</a>
         </section>
 
         <section id="objet">
@@ -112,39 +138,56 @@ chaque section du main de la page d'acceuille a une page.html qui contient plus 
             ces corps se structurent en galaxies, amas et superamas.
           </p>
 
-          <a href="objet.html">decouvrir plus</a>
+          <a class="btn" href="objet.html">decouvrir plus</a>
         </section>
       </main>
       <!-- fin de main -->
     </div>
 
-    <footer>
-      <h3>References</h3>
-      <ul>
-        <li>Wikipedia</li>
-        <li>LaScience.be</li>
-        <li>fun.mooc</li>
-      </ul>
-      <h3>Liens externes</h3>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://fr.wikipedia.org/wiki/Sciences_de_l%27Univers"
-            >Science de l'univers</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://www.youtube.com/watch?v=oWbEPBCwriM"
-            >[Daniel Kunth] De la vie dans l’Univers</a
-          >
-        </li>
-      </ul>
-      <strong id="contact"> FOLLOW US! </strong> <br />
-      <a href="#"><i class="icon ion-social-facebook"></i></a>
-      <a href="#"><i class="icon ion-social-linkedin"></i></a>
 
-      <p>&copy Copyright 2020 ScienceUnivers - Tous droits réservés.</p>
-    </footer>
+
+
+
+    <!-- footer start  -->
+    <div class="footer">
+      <footer>
+          <div class="footer_container">
+              <div class="row justify-content-center">
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Liens externes</h3>
+                      <ul>
+                        <li>
+                          <a
+                            target="_blank"
+                            href="https://fr.wikipedia.org/wiki/Sciences_de_l%27Univers"
+                            >Science de l'univers</a
+                          >
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://www.youtube.com/watch?v=oWbEPBCwriM"
+                            >[Daniel Kunth] De la vie dans l’Univers</a
+                          >
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>References</h3>
+                      <ul>
+                        <li>Wikipedia</li>
+                        <li>LaScience.be</li>
+                        <li>fun.mooc</li>
+                      </ul>
+                  </div>
+                  
+                  <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                      <p class="copyright">&copy Copyright 2020 ScienceUnivers - Tous droits réservés.</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+    <!-- footer end -->
+
+   
   </body>
 </html>
