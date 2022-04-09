@@ -15,85 +15,123 @@
     <title>Les branches des sciences de l'Univers</title>
   </head>
   <body>
-    <div>
-      <!-- debut nav : utilise pour explorer les diffrent partie du page branche  -->
-      <nav>
-        <img src="Assets/logo.svg" alt="" />
-        <a href="index.html">Accueil</a>
-        <a href="#content">Contenu</a>
-        <a href="#contact">Contact</a>
-        <a href="evolution.html">Evolution</a>
-        <a href="objet.html">Objets</a>
-      </nav>
-      <!-- fin nav  -->
-    </div>
-    <div>
-      <header>
-        <h1>SCIENCES DE L'UNIVERS</h1>
-        <br />
-        <h1>Les différentes branches des sciences de l'Univers</h1>
-        <br />
-        <h5>bienvenue dans le doc sience de l'univers</h5>
-        <p>some sort of pic about univers</p>
+
+
+    <div class="nav-container .scrolled">
+      <div id="nabvar">
+        <nav class="navbar">
+          <div class="nav-center">
+            <div class="nav-header">
+              <a href="index.html" class="nav-logo">
+                <img src="Assets/logo.svg" alt="LOGO" class="nav-logo" />
+              </a>
+              <button class="nav-btn btn">
+                <i class="fas fa-align-justify"></i>
+              </button>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="#sommaire " class="nav-link">Contenu </a>
+            <a href="evolution.html" class="nav-link">Evolution</a>
+            <a href="objet.html" class="nav-link">Objets</a>
+            <a href="#contact" class="btn">Contact</a>
+            <script>
+              const getElement = (selector) => {
+                const element = document.querySelector(selector);
+
+                if (element) return element;
+                throw Error(
+                  `Please double check your class names, there is no ${selector} class`
+                );
+              };
+
+              const links = getElement(".nav-links");
+              const navBtnDOM = getElement(".nav-btn");
+
+              navBtnDOM.addEventListener("click", () => {
+                links.classList.toggle("show-links");
+              });
+            </script>
+          </div>
+        </nav>
+      </div>
+
+
+
+      <header class="hdr">
+        <div class="hdr-container">
+          <div class="hdr-text">
+            <h1>SCIENCES DE L'UNIVERS</h1>
+            <h4>Les différentes branches des sciences de l'Univers</h4>
+          </div>
+        </div>
       </header>
-    </div>
-    <div>
-      <!-- debut de aside , ici le 'aside' est utilise pour lister le contenu de la page index.html
-      chaque item de la liste contient un lien qui permet de scroller vers le titre cible-->
-      <aside id="content">
-        <h3>Sommaire</h3>
-        <ul>
-          <li><a href="#nomie">Astronomie</a></li>
-          <ul>
-            <li><a href="#his">Histoire</a></li>
+
+
+
+
+      <div class="middle">
+        <aside class="content-container column">
+
+        <div class="tags-container">
+          <h4 id="sommaire">Sommaire</h4>
+          <div class="tags-list">
             <ul>
-              <li><a href="#ma">Moyen Âge</a></li>
-              <li><a href="#em">Époque moderne</a></li>
-              <li><a href="#ec">Époque contemporaine</a></li>
+              <li><a href="#nomie">Astronomie</a></li>
+              <ul>
+                <li><a href="#his">Histoire</a></li>
+                <ul>
+                  <li><a href="#ma">Moyen Âge</a></li>
+                  <li><a href="#em">Époque moderne</a></li>
+                  <li><a href="#ec">Époque contemporaine</a></li>
+                </ul>
+                <li><a href="#">Matières de l'astronomie</a></li>
+                <ul>
+                  <li><a href="#as">Astronomie solaire</a></li>
+                  <li><a href="#ast">Astronomie stellaire</a></li>
+                  <li><a href="#ag">Astronomie galactique</a></li>
+                  <li><a href="#ae">Astronomie extragalactique</a></li>
+                </ul>
+              </ul>
+              <li><a href="#physique">Astrophysique</a></li>
+              <ul>
+                <li><a href="#da">Disciplines de l'astrophysique</a></li>
+                <li><a href="#ha">Historique</a></li>
+                <li><a href="#ao">Astronomie observationnelle</a></li>
+                <li><a href="#at">Astrophysique théorique</a></li>
+              </ul>
+              <li><a href="#cosmo">Cosmologie</a></li>
             </ul>
-            <li><a href="#">Matières de l'astronomie</a></li>
-            <ul>
-              <li><a href="#as">Astronomie solaire</a></li>
-              <li><a href="#ast">Astronomie stellaire</a></li>
-              <li><a href="#ag">Astronomie galactique</a></li>
-              <li><a href="#ae">Astronomie extragalactique</a></li>
-            </ul>
-          </ul>
-          <li><a href="#physique">Astrophysique</a></li>
-          <ul>
-            <li><a href="#da">Disciplines de l'astrophysique</a></li>
-            <li><a href="#ha">Historique</a></li>
-            <li><a href="#ao">Astronomie observationnelle</a></li>
-            <li><a href="#at">Astrophysique théorique</a></li>
-          </ul>
-          <li><a href="#cosmo"></a></li>
-        </ul>
-      </aside>
-      <!-- fin aside  -->
-    </div>
-    <div>
-      <main>
+          </div>
+        </div>
+        </aside>
+        <main class="main_info column">
         <!-- debut premier section qui parlera de l'astronomie -->
         <section id="nomie">
           <h3>Astronomie</h3>
-          <p>
-            L'astronomie est la science de l'observation des astres, cherchant à
-            expliquer leur origine, leur évolution, ainsi que leurs propriétés
-            physiques et chimiques. L'étymologie du terme astronomie vient du
-            grec ἀστρονομία (ἄστρον et νόμος) ce qui signifie loi des astres.
-            Avec plus de 5 000 ans d'histoire1, les origines de l'astronomie
-            remontent au-delà de l'Antiquité dans les pratiques religieuses
-            préhistoriques. L'astronomie est l'une des rares sciences où les
-            amateurs jouent encore un rôle actif. Elle est pratiquée à titre de
-            loisir par un large public d'astronomes amateurs.
-          </p>
+          <br />
+          <div>
+            <p>
+              L'astronomie est la science de l'observation des astres, cherchant
+              à expliquer leur origine, leur évolution, ainsi que leurs
+              propriétés physiques et chimiques. L'étymologie du terme
+              astronomie vient du grec ἀστρονομία (ἄστρον et νόμος) ce qui
+              signifie loi des astres. Avec plus de 5 000 ans d'histoire1, les
+              origines de l'astronomie remontent au-delà de l'Antiquité dans les
+              pratiques religieuses préhistoriques. L'astronomie est l'une des
+              rares sciences où les amateurs jouent encore un rôle actif. Elle
+              est pratiquée à titre de loisir par un large public d'astronomes
+              amateurs.
+            </p>
 
-          <img
-            src="Assets/nomie1.jpg"
-            alt="Nébuleuse M17 : photographie prise par le télescope Hubble."
-          />
-
+            <img
+              src="Assets/nomie1.jpg"
+              alt="Nébuleuse M17 : photographie prise par le télescope Hubble."
+            />
+          </div>
           <h4 id="his">Histoire</h4>
+          <br />
           <div>
             <p>
               L'astronomie est considérée comme la plus ancienne des sciences1.
@@ -116,7 +154,9 @@
               alt="Sur tous les continents et depuis la haute antiquité, l'observation du ciel a une grande importance (Diego Durán)."
             />
           </div>
+          <br />
           <h5 id="ma">Moyen Âge</h5>
+          <br />
           <div>
             <p>
               L'astronomie ne peut être étudiée sans l'apport d'autres sciences
@@ -130,7 +170,9 @@
               alt="Jonitus, les débuts de l'astronomie (1343-1348)"
             />
           </div>
+          <br />
           <h5 id="em">Époque moderne</h5>
+          <br />
           <div>
             <p>
               Pendant la Renaissance, Copernic propose un modèle héliocentrique
@@ -160,7 +202,9 @@
               alt="Dessin d'un astronome chinois en 1675."
             />
           </div>
+          <br />
           <h5 id="ec">Époque contemporaine</h5>
+          <br />
           <div>
             <p>
               On découvre que les étoiles sont des objets très lointains :
@@ -191,8 +235,11 @@
 
             <img src="Assets/nomie5.jpg" alt="Isaac Newton." />
           </div>
+          <br />
           <h4 id="mata">Matières de l'astronomie</h4>
+          <br />
           <h5 id="as">Astronomie solaire</h5>
+          <br />
           <div>
             <p>
               L'étoile la plus étudiée est le Soleil, une petite étoile typique
@@ -232,7 +279,9 @@
               alt="Une image de la photosphère du Soleil en ultraviolets prise par le télescope TRACE."
             />
           </div>
+          <br />
           <h5 id="ast">Astronomie stellaire</h5>
+          <br />
           <div>
             <p>
               L'étude des étoiles et de l'évolution stellaire est fondamentale
@@ -680,7 +729,7 @@
             />
           </div>
           <div>
-            <h4>La cosmologie moderne</h4>
+            <h4 >La cosmologie moderne</h4>
             <p>
               La Terre est une planète de taille relativement modeste (environ 6
               370 km de rayon), en orbite autour d'une étoile de la Séquence
@@ -712,36 +761,63 @@
 
           <a href="#sommaire">allez au sommaire</a>
         </section>
-      </main>
-    </div>
+        </main>
+     </div>
 
-    <footer>
-      <h3>References</h3>
-      <ul>
-        <li>Wikipedia</li>
-        <li>LaScience.be</li>
-        <li>fun.mooc</li>
-      </ul>
-      <h3>Liens externes</h3>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://fr.wikipedia.org/wiki/Sciences_de_l%27Univers"
-            >Science de l'univers</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://www.youtube.com/watch?v=oWbEPBCwriM"
-            >[Daniel Kunth] De la vie dans l’Univers</a
-          >
-        </li>
-      </ul>
-      <strong id="contact"> FOLLOW US! </strong> <br />
-      <a href="#"><i class="icon ion-social-facebook"></i></a>
-      <a href="#"><i class="icon ion-social-linkedin"></i></a>
 
-      <p>&copy Copyright 2020 ScienceUnivers - Tous droits réservés.</p>
+    <footer >
+      <div class="ftr_container"> 
+        <table>
+          <tr>
+            <th><h5>Liens externes</h5></th>
+            <th><h5>References</h5></th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://fr.wikipedia.org/wiki/Sciences_de_l%27Univers"
+                    >Science de l'univers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=oWbEPBCwriM"
+                    >[Daniel Kunth] De la vie dans l’Univers</a
+                  >
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Wikipedia</li>
+                <li>LaScience.be</li>
+                <li>fun.mooc</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="page-footer">
+        <p>
+          <strong id="contact"> FOLLOW US! </strong> <br />
+  
+          <a href="#"><i class="icon ion-social-facebook"></i> </a>
+  
+          <a href="#"><i class="icon ion-social-linkedin"></i></a>
+          <br />
+          &copy; Copyright <strong>2022</strong>
+          <span class="footer-logo">ScienceUnivers</span> Realise Par
+          <a href="https://github.com/HadBeen/projet_prog_web"
+            >Hadjer BENALI , Amine MOULOUDJ</a
+          >
+        </p>
+      </div>
+      
     </footer>
   </body>
 </html>
