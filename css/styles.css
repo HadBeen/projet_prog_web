@@ -458,7 +458,7 @@ h5 {
 }
 /*
 =============== 
-
+display du main et aside :une styling similaire 'meme effet' a l'utilisatoin du flex . 
 ===============
 */
 /* middle est une classe qui sert a afficher le main et le aside dans des column  */
@@ -467,10 +467,12 @@ h5 {
   clear: both;
   display: table;
 }
+/* classe ulitlise pour contenir les element de middle 'aside et main ' */
 .column {
   float: left;
   padding: 15px;
 }
+/* aside et main seront dans affiche l'un a cote de l'autre ,la somme denleur largeur fait la largeur de la page */
 aside {
   width: 25%;
 }
